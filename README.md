@@ -5,3 +5,5 @@
 ## npm run ios / npm run android
 # DEPLOY 
 ## 
+# TROUBLESHOOTING
+## npm start -- --reset-cache
