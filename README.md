@@ -1,4 +1,5 @@
-# Build with React Native (via react-native cli)
+# Build with React Native 
+### Scaffolded with react-native cli NOT create-react-native-app
 # INSTALL 
 ## yarn 
 # RUN 
