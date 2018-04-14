@@ -6,20 +6,19 @@ import {
   View
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.instructions}>
-          {instructions}
+        <Text style={[styles.welcome, {flex:1}]}>
+          Hello, World!
+        </Text>
+        <Text style={[styles.welcome, {flex:2}]}>
+          Hello, World!
+        </Text>
+        <Text style={[styles.welcome, {flex:1}]}>
+          Hello, World!
         </Text>
       </View>
     );
@@ -29,18 +28,14 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    // alignItems: 'center',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'orange',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    backgroundColor: 'rosybrown',
+    margin: 20,
   },
 });
