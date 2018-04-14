@@ -2,7 +2,7 @@
 # INSTALL 
 ## yarn 
 # RUN 
-## npm run ios / npm run android
+## react-native run-ios / react-native run-android
 # DEPLOY 
 ## 
 # TROUBLESHOOTING
