@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
 } from 'react-native'
 
+import RandomNum from './RandomNum'
+
 export default class App extends Component {
     static propTypes = {
         randomNumCount: PropTypes.number.isRequired,
@@ -24,7 +26,7 @@ export default class App extends Component {
     handlePress = () => {
 
     }
-    
+
   render() {
     return (
       <View style={styles.container}>
@@ -37,11 +39,7 @@ export default class App extends Component {
 
         <View style={styles.randomContainer}>
             {this.randomNums.map((randomNum, index) => 
-                <TouchableOpacity 
-                    onPress={this.handlePress}
-                    style={styles.circle} key={index}>
-                    <Text style={styles.randomText}>{randomNum}</Text>
-                </TouchableOpacity>
+                <RandomNum key={index} number={randomNum} />
         )}
         </View>
 
@@ -71,15 +69,5 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       flexWrap: 'wrap',
       justifyContent: 'space-around',
-  },
-  circle: {
-      borderRadius: 50,
-      width: 100,
-      margin: 20,
-      backgroundColor: 'cornflowerblue',
-  },
-  randomText: {
-      fontSize: 35,
-      textAlign: 'center',
   },
 })
