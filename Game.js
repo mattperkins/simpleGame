@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
 } from 'react-native'
 
 export default class App extends Component {
@@ -24,15 +25,17 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         
-        <Text style={styles.target}>
-            {this.target}
-        </Text>
+        <View style={styles.sumTotal}>
+            <Text style={styles.targetNum}>
+                {this.target}
+            </Text>
+        </View>
 
         <View style={styles.randomContainer}>
             {this.randomNums.map((randomNum, index) => 
-                <View style={styles.circle} key={index}>
+                <TouchableOpacity style={styles.circle} key={index}>
                     <Text style={styles.randomText}>{randomNum}</Text>
-                </View>
+                </TouchableOpacity>
         )}
         </View>
 
@@ -44,12 +47,17 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange',
+    backgroundColor: '#eee',
   },
-  target: {
+  sumTotal: {
+    borderRadius: 6,
+    backgroundColor: 'tomato',
+    margin: 60,
+    marginTop: 100,
+    padding: 10,
+  },
+  targetNum: {
       fontSize: 40,
-      backgroundColor: '#aaa',
-      margin: 50,
       textAlign: 'center'
   },
   randomContainer: {
@@ -62,7 +70,7 @@ const styles = StyleSheet.create({
       borderRadius: 50,
       width: 100,
       margin: 20,
-      backgroundColor: '#999',
+      backgroundColor: 'cornflowerblue',
   },
   randomText: {
       fontSize: 35,
