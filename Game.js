@@ -21,6 +21,10 @@ export default class App extends Component {
         .slice(0, this.props.randomNumCount -2)
         .reduce((acc, curr) => acc + curr, 0)
 
+    handlePress = () => {
+
+    }
+    
   render() {
     return (
       <View style={styles.container}>
@@ -33,7 +37,9 @@ export default class App extends Component {
 
         <View style={styles.randomContainer}>
             {this.randomNums.map((randomNum, index) => 
-                <TouchableOpacity style={styles.circle} key={index}>
+                <TouchableOpacity 
+                    onPress={this.handlePress}
+                    style={styles.circle} key={index}>
                     <Text style={styles.randomText}>{randomNum}</Text>
                 </TouchableOpacity>
         )}
